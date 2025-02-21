@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* --------------------------- MAIN ---------------------------- */
+            body {
+                font-family: sans-serif;
+                background-color: #f5f5f5;
+                color: #333;
+                margin: 0;
+                padding: 10px;
+                width: 500px;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .clear-btn,
+            .print-btn,
+            .filter-btn {
+                background-color: #ff3b30;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .clear-btn:hover,
+            .print-btn:hover,
+            .filter-btn:hover {
+                background-color: #d32f2f;
+            }
+            h1 {
+                font-size: 18px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .columns {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .column {
+                width: 48%;
+                margin-bottom: 10px;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                word-wrap: break-word;
+            }
+
+            /* ----------------- BUTTONS --------------- */
+            .buttons {
+                display: flex;
+                gap: 5px;
+            }
+            .item button {
+                background-color: #ff3b30;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-size: 16px;
+                line-height: 1;
+            }
+            .item .editButton {
+                background-color: #4caf50;
+            }
+            .item .editButton:hover {
+                background-color: #45a049;
+            }
+            .item .saveButton {
+                background-color: #2196f3;
+            }
+            .item .saveButton:hover {
+                background-color: #0b7dda;
+            }
+            .item .deleteButton {
+                background-color: #ff3b30;
+            }
+            .item .deleteButton:hover {
+                background-color: #d32f2f;
+            }
+            @media (max-width: 600px) {
+                .column {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <button class="clear-btn" id="clearBtn">Ocisti sve</button>
+            <button class="print-btn" id="printBtn">Print</button>
+            <button class="filter-btn" id="filterBtn">Filtriraj</button>
+            <h1>Artikli</h1>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <h2>ASD</h2>
+                <ul id="asdItemList"></ul>
+            </div>
+            <div class="column">
+                <h2>WER</h2>
+                <ul id="werItemList"></ul>
+            </div>
+            <div class="column">
+                <h2>CT</h2>
+                <ul id="ctItemList"></ul>
+            </div>
+            <div class="column">
+                <h2>EWE</h2>
+                <ul id="eweItemList"></ul>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
